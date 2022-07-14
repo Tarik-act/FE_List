@@ -17,26 +17,22 @@ const ShowEntry = ({ taskValue, onDelete }) => {
           <div className='list_row_item'>Action</div>
         </div>
         <div className='table'>
-          {!taskValue === [] ? (
-            taskValue.map((task) => {
-              const { name, cocktail, points, id } = task;
-              return (
-                <div className='list_group' key={id}>
-                  <div className='table_item'>{name}</div>
-                  <div className='table_item'>{cocktail}</div>
-                  <div className='table_item'>{points}</div>
-                  <div className='table_item table_action'>
-                    <button className='btn'>Edit</button>
-                    <button className='btn' onClick={() => onDelete(id)}>
-                      Delete
-                    </button>
-                  </div>
+          {taskValue.map((task) => {
+            const { name, cocktail, points, id } = task;
+            return (
+              <div className='list_group' key={id}>
+                <div className='table_item'>{name}</div>
+                <div className='table_item'>{cocktail}</div>
+                <div className='table_item'>{points}</div>
+                <div className='table_item table_action'>
+                  <button className='btn'>Edit</button>
+                  <button className='btn' onClick={() => onDelete(id)}>
+                    Delete
+                  </button>
                 </div>
-              );
-            })
-          ) : (
-            <p style={{ textAlign: 'center' }}>No Data To Show</p>
-          )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

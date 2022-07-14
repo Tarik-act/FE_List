@@ -13,7 +13,8 @@ const Task = () => {
 
   const fetchTask = () => {
     const list = tasks.map((task) => task);
-    console.log(list);
+    // console.log(list);
+    console.log(tasks);
     return list;
   };
 
