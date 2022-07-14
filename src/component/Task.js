@@ -26,11 +26,7 @@ const Task = () => {
   return (
     <div className='task_Wrapper'>
       <AddEntry onAdd={addTask} />
-      {tasks ? (
-        <ShowEntry taskValue={tasks} onDelete={deleteTask} />
-      ) : (
-        'No Data to show'
-      )}
+      <ShowEntry taskValue={tasks} onDelete={deleteTask} />
     </div>
   );
 };
