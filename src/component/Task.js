@@ -11,13 +11,13 @@ const Task = () => {
     setTask([...tasks, newTask]);
   };
 
-  // const fetchTask = () => {
-  //   const list = tasks.map((task) => task);
-  //   console.log(list);
-  //   return list;
-  // };
+  const fetchTask = () => {
+    const list = tasks.map((task) => task);
+    console.log(list);
+    return list;
+  };
 
-  // fetchTask();
+  fetchTask();
 
   const deleteTask = (id) => {
     setTask(tasks.filter((task) => task.id !== id));
