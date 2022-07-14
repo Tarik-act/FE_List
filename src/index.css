@@ -1,13 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Poppins:wght@400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  font-weight: 700;
+  width: 100vw;
+}
+
+.navbar .logo {
+  color: #f90;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+
+.cta ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.cta ul li a {
+  background-color: #fff;
+  border-radius: 4px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 10px;
+  color: #222;
+  margin: 0.75rem 0.75rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta ul li a.active {
+  background-color: #f90;
+}
+
+.cta ul a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #222;
+}
+
+/* Task */
+
+.task_Wrapper {
+  display: flex;
+}
+
+.task_Wrapper h1 {
+  text-align: center;
+}
+
+/* Add Entry */
+
+.add_entry,
+.show_entry {
+  margin: 3rem;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.add_entry {
+  height: 100%;
+  flex: 2 1;
+  padding: 1rem 1.2rem;
+}
+
+.add_entry .form_control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.add_entry .form_control input,
+.add_entry .form_control select {
+  border-radius: 2px;
+  border: none;
+  color: #000;
+  outline: none;
+  margin: 5px 0;
+  padding: 0.5rem 0.75rem;
+}
+
+.add_entry .form_button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 13px;
+}
+
+.add_entry .form_button .btn,
+button {
+  padding: 0.5rem 1rem;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #212121;
+  font-family: inherit;
+  font-weight: bold;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add_entry .form_button .btn[type='submit'] {
+  background-color: #f90;
+}
+
+.add_entry .form_button .btn:hover,
+button:hover {
+  opacity: 0.9;
+}
+
+/* Show Entry */
+
+.show_entry {
+  flex: 3 1;
+  margin-left: 0;
+}
+
+.show_entry h1 {
+  padding: 1.5rem;
+}
+
+.show_entry .list_leaderBoard {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.show_entry .list_leaderBoard .list_leaderItem {
+  margin-right: 1rem;
+}
+
+.show_entry .list_row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  background-color: #f90;
+  color: #000;
+  font-weight: bold;
+  width: 100%;
+}
+
+.show_entry .list_row .list_row_item {
+  flex: 1 1;
+  text-align: center;
+}
+
+.show_entry .table {
+  max-height: 50vh;
+  overflow: scroll;
+}
+.show_entry .table .list_group {
+  display: flex;
+}
+
+.show_entry .table .table_item {
+  flex: 1 1;
+  text-align: center;
+  padding: 0.5rem;
 }
